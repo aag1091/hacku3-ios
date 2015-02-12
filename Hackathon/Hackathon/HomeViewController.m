@@ -18,6 +18,7 @@
 @implementation HomeViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.topCategoryTableView.rowHeight = 110.0f;
@@ -50,25 +51,31 @@
     
     if(indexPath.section == 0)
     {
-        cell.backgroundColor = [UIColor colorWithRed:231.0f/255.0f green:76.0f/255.0f blue:60.0f/255.0f alpha:1] ;
+        
+        cell.backgroundColor = [UIColor whiteColor];
+        //cell.backgroundColor = [UIColor colorWithRed:231.0f/255.0f green:76.0f/255.0f blue:60.0f/255.0f alpha:1] ;
     }
 
     else if(indexPath.section == 1)
     {
-        cell.backgroundColor = [UIColor colorWithRed:241.0f/255.0f green:196.0f/255.0f blue:15.0f/255.0f alpha:1] ;
+        cell.backgroundColor = [UIColor whiteColor];
+        //cell.backgroundColor = [UIColor colorWithRed:241.0f/255.0f green:196.0f/255.0f blue:15.0f/255.0f alpha:1] ;
     }
    else  if(indexPath.section == 2)
     {
-        cell.backgroundColor = [UIColor colorWithRed:52.0f/255.0f green:152.0f/255.0f blue:219.0f/255.0f alpha:1] ;
+        cell.backgroundColor = [UIColor whiteColor];
+        //cell.backgroundColor = [UIColor colorWithRed:52.0f/255.0f green:152.0f/255.0f blue:219.0f/255.0f alpha:1] ;
     }
    else  if(indexPath.section == 3)
    {
-       cell.backgroundColor = [UIColor colorWithRed:46.0f/255.0f green:204.0f/255.0f blue:113.0f/255.0f alpha:1] ;
+       cell.backgroundColor = [UIColor whiteColor];
+       //cell.backgroundColor = [UIColor colorWithRed:46.0f/255.0f green:204.0f/255.0f blue:113.0f/255.0f alpha:1] ;
    }
     
    else  if(indexPath.section == 4)
    {
-       cell.backgroundColor = [UIColor colorWithRed:155.0f/255.0f green:89.0f/255.0f blue:182.0f/255.0f alpha:1] ;
+       cell.backgroundColor = [UIColor whiteColor];
+       //cell.backgroundColor = [UIColor colorWithRed:155.0f/255.0f green:89.0f/255.0f blue:182.0f/255.0f alpha:1] ;
    }
 
     
@@ -77,12 +84,18 @@
     return cell;
 }
 
--(CGFloat)tableView:(UITableView*)tableView heightForFooterInSection:(NSInteger)section
+-(CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
 {
     
     return 8.0;
 }
-
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
+    
+    //Set the background color of the View
+    view.tintColor = [UIColor clearColor];
+    
+    //Set the TextLabel Color
+}
 
 /*
 #pragma mark - Navigation
